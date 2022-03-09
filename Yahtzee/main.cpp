@@ -12,7 +12,9 @@ int SommeDes(int des[5] )
 
 bool DesValid(int des[5])
 {
-	return false;
+
+	return true;
+	
 }
 int main()
 {
