@@ -16,7 +16,11 @@ bool ValidDice(int dice[5])
 	{
 		if (dice[i] < 1)
 			return false;
+		if (dice[i] > 6)
+			return false;
 	}
+
+
 	return true;
 	
 }
