@@ -10,7 +10,6 @@ int SumDice(int des[5] )
 	return result;
 }
 
-
 bool ValidValue(int value)
 {
 	if (value < 1 || value > 6)
@@ -28,6 +27,11 @@ bool ValidDice(int dice[5])
 
 	return true;
 	
+}
+
+int OneDiceSum(int dice[5])
+{
+	return 0;
 }
 int main()
 {
