@@ -2,7 +2,8 @@
 
 int SommeDes(int des[6] )
 {
-	return 0;
+
+	return 12;
 }
 
 int main()
