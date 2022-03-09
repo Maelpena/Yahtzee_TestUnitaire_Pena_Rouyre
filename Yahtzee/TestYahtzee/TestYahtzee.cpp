@@ -28,5 +28,10 @@ namespace TestYahtzee
 			Assert::IsFalse(ValidDice(dice));
 		}
 
+		TEST_METHOD(TestDesValide86823ReturnFalse)
+		{
+			int dice[5] = { 8, 6, 8, 2, 3 };
+			Assert::IsFalse(ValidDice(dice));
+		}
 	};
 }
