@@ -10,19 +10,23 @@ namespace TestYahtzee
 	{
 
 	public:
-		TEST_METHOD(TestSomme11343Renvoie12)
+		TEST_METHOD(TestSum11343Return12)
 		{
-			int des[5] = { 1, 1, 3, 4, 3 };
-			Assert::AreEqual(12, SommeDes(des));
+			int dice[5] = { 1, 1, 3, 4, 3 };
+			Assert::AreEqual(12, SumDice(dice));
 		}
 
-		TEST_METHOD(TestDesValide66423RenvoieTrue)
+		TEST_METHOD(TestDesValide66423ReturnTrue)
 		{
-			int des[5] = { 6, 6, 4, 2, 3 };
-			Assert::IsTrue(DesValid(des));
-
+			int dice[5] = { 6, 6, 4, 2, 3 };
+			Assert::IsTrue(ValidDice(dice));
 		}
 
+		TEST_METHOD(TestDesValideMoins16423ReturnFalse)
+		{
+			int dice[5] = { -1, 6, 4, 2, 3 };
+			Assert::IsFalse(ValidDice(dice));
+		}
 
 	};
 }

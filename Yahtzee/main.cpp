@@ -1,6 +1,6 @@
 
 
-int SommeDes(int des[5] )
+int SumDice(int des[5] )
 {
 	int result = 0;
 	for (size_t i = 0; i < 5; i++)
@@ -10,9 +10,13 @@ int SommeDes(int des[5] )
 	return result;
 }
 
-bool DesValid(int des[5])
+bool ValidDice(int dice[5])
 {
-
+	for (size_t i = 0; i < 5; i++)
+	{
+		if (dice[i] < 1)
+			return false;
+	}
 	return true;
 	
 }
