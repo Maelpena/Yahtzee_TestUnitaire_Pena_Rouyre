@@ -8,12 +8,21 @@ namespace TestYahtzee
 {
 	TEST_CLASS(TestYahtzee)
 	{
-		int des[6] = { 1, 1, 3, 4, 1, 2 };
 
 	public:
-		TEST_METHOD(TestSomme113412Renvoie12)
+		TEST_METHOD(TestSomme11343Renvoie12)
 		{
+			int des[5] = { 1, 1, 3, 4, 3 };
 			Assert::AreEqual(12, SommeDes(des));
 		}
+
+		TEST_METHOD(TestDesValide66423RenvoieTrue)
+		{
+			int des[5] = { 6, 6, 4, 2, 3 };
+			Assert::IsTrue(DesValid(des));
+
+		}
+
+
 	};
 }

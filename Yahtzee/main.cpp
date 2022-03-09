@@ -1,15 +1,19 @@
 
 
-int SommeDes(int des[6] )
+int SommeDes(int des[5] )
 {
 	int result = 0;
-	for (size_t i = 0; i < 6; i++)
+	for (size_t i = 0; i < 5; i++)
 	{
 		result += des[i];
 	}
 	return result;
 }
 
+bool DesValid(int des[5])
+{
+	return false;
+}
 int main()
 {
 	return 0;
