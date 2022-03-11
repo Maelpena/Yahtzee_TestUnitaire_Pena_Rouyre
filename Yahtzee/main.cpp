@@ -44,9 +44,17 @@ int OneDiceSum(int dice[5])
 
 int TwoDiceSum(int dice[5])
 {
-
-	return 2;
+	int value = 0;
+	for (size_t i = 0; i < 5; i++)
+	{
+		if (dice[i] == 2)
+		{
+			value++;
+		}
+	}
+	return value;
 }
+
 int main()
 {
 	return 0;
