@@ -43,7 +43,10 @@ namespace TestYahtzee
 		TEST_METHOD(TestTwoDiceSum12241Return2)
 		{
 			int dice[5] = { 1, 2, 2, 4, 1 };
-			Assert::AreEqual(3, TwoDiceSum(dice));
+			Assert::AreEqual(2, TwoDiceSum(dice));
 		}
+
+
+		
 	};
 }
