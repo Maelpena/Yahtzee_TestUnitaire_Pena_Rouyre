@@ -118,14 +118,13 @@ int FourTwoDiceSum(int dice[5])
 
 }
 
-
-int YahtzeeTwo(int dice[5])
+int YahtzeeForValue(int dice[5], int value)
 {
 	int diceCount = 0;
 
 	for (size_t i = 0; i < 5; i++)
 	{
-		if (dice[i] == 2)
+		if (dice[i] == value)
 		{
 			diceCount++;
 		}
@@ -134,7 +133,15 @@ int YahtzeeTwo(int dice[5])
 	if (diceCount == 5)
 		return 50;
 	return 0;
+}
+int YahtzeeTwo(int dice[5])
+{
+	return YahtzeeForValue(dice, 2);
+}
 
+int YahtzeeThree(int dice[5])
+{
+	return YahtzeeForValue(dice, 3);
 }
 int main()
 {

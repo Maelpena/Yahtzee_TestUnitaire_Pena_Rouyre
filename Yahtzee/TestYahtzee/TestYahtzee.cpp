@@ -81,5 +81,12 @@ namespace TestYahtzee
 			int dice[5] = { 2, 2, 2, 2, 2 };
 			Assert::AreEqual(50, YahtzeeTwo(dice));
 		}
+
+		TEST_METHOD(TestYahtzeeOfThree33333Return50)
+		{
+			int dice[5] = { 3, 3, 3, 3, 3 };
+			Assert::AreEqual(50, YahtzeeThree(dice));
+		}
+
 	};
 }
