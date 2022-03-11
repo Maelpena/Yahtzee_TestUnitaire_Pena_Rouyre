@@ -73,7 +73,24 @@ int ThreeOneDiceSum(int dice[5])
 		}
 	}
 	return 0;
+}
 
+int ThreeTwoDiceSum(int dice[5])
+{
+	int diceCount = 0;
+	int result = 0;
+
+	for (size_t i = 0; i < 5; i++)
+	{
+		if (dice[i] == 2)
+		{
+			diceCount++;
+			result += 2;
+			if (diceCount == 3)
+				return result;
+		}
+	}
+	return 0;
 }
 
 

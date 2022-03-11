@@ -58,5 +58,10 @@ namespace TestYahtzee
 			Assert::AreEqual(3, ThreeOneDiceSum(dice));
 		}
 		
+		TEST_METHOD(TestAtLeastThreeTwoDice11222Return6)
+		{
+			int dice[5] = { 1, 1, 2, 2, 2 };
+			Assert::AreEqual(6, ThreeTwoDiceSum(dice));
+		}
 	};
 }
