@@ -179,7 +179,10 @@ int FullHouse(int dice[5])
 		return 0;
 }
 
-
+int SmallStraight()
+{
+	return 0;
+}
 
 int main()
 {
