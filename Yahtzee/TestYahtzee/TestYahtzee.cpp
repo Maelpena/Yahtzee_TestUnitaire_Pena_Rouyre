@@ -34,12 +34,16 @@ namespace TestYahtzee
 			Assert::IsFalse(ValidDice(dice));
 		}
 
-
 		TEST_METHOD(TestOneDiceSum11531Return3)
 		{
 			int dice[5] = { 1, 1, 5, 3, 1 };
 			Assert::AreEqual(3, OneDiceSum(dice));
 		}
 
+		TEST_METHOD(TestTwoDiceSum12241Return2)
+		{
+			int dice[5] = { 1, 2, 2, 4, 1 };
+			Assert::AreEqual(3, TwoDiceSum(dice));
+		}
 	};
 }

@@ -41,6 +41,11 @@ int OneDiceSum(int dice[5])
 	}
 	return value;
 }
+
+int TwoDiceSum(int dice[5])
+{
+	return 0;
+}
 int main()
 {
 	return 0;
