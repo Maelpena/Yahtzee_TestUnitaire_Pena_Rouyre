@@ -59,6 +59,8 @@ int ThreeDiceSum(int dice[5])
 
 int ThreeOneDiceSum(int dice[5])
 {
+
+
 	return 0;
 }
 
