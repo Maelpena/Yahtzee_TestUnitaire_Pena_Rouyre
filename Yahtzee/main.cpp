@@ -143,6 +143,44 @@ int YahtzeeThree(int dice[5])
 {
 	return YahtzeeForValue(dice, 3);
 }
+
+int FullHouse(int dice[5])
+{
+
+	int firstDiceIndex = dice[0];
+	int secondDiceIndex = 0;
+	int firstDiceCount = 1;
+	int secondDiceCount = 0;
+
+	for (size_t i = 1; i < 5; i++)
+	{
+		
+		if (dice[i] == firstDiceIndex )
+		{
+			firstDiceCount++;
+		}
+		else if (secondDiceIndex == 0)
+		{
+			secondDiceIndex = dice[i];
+			secondDiceCount++;
+		}
+		else if (dice[i] == secondDiceIndex)
+		{
+			secondDiceCount++;
+
+		}
+		else {
+			return 0;
+		}
+	}
+	if (firstDiceCount == 3 || secondDiceCount == 3)
+		return 25;
+	else
+		return 0;
+}
+
+
+
 int main()
 {
 	return 0;
