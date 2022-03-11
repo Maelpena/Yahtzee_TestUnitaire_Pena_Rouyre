@@ -111,5 +111,11 @@ namespace TestYahtzee
 			int dice[5] = { 5, 2, 4, 3, 3 };
 			Assert::AreEqual(30, SmallStraight(dice));
 		}
+
+		TEST_METHOD(TestLargeStraight64532Return40)
+		{
+			int dice[5] = { 6, 4, 5, 3, 2 };
+			Assert::AreEqual(40, LargeStraight(dice));
+		}
 	};
 }

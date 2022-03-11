@@ -208,6 +208,10 @@ int SmallStraight(int dice[5])
 	return 0;
 }
 
+int LargeStraight(int dice[5])
+{
+	return 0;
+}
 int main()
 {
 	int dice[5] = { 5, 2, 4, 3, 3 };
