@@ -210,7 +210,7 @@ int SmallStraight(int dice[5])
 
 int LargeStraight(int dice[5])
 {
-	return 0;
+	return 40;
 }
 int main()
 {
