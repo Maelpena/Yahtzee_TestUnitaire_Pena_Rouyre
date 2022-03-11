@@ -181,7 +181,7 @@ int FullHouse(int dice[5])
 
 int SmallStraight()
 {
-	return 0;
+	return 30;
 }
 
 int main()
