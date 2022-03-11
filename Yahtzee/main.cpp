@@ -29,37 +29,34 @@ bool ValidDice(int dice[5])
 	
 }
 
-int OneDiceSum(int dice[5])
+int SameDiceSumForValue(int dice[5], int value)
 {
-	int value = 0;
+	int result = 0;
 	for (size_t i = 0; i < 5; i++)
 	{
-		if (dice[i] == 1)
+		if (dice[i] == value)
 		{
-			value++;
+			result += value;
 		}
 	}
-	return value;
+	return result;
+}
+
+int OneDiceSum(int dice[5])
+{
+	return SameDiceSumForValue(dice, 1);
 }
 
 int TwoDiceSum(int dice[5])
 {
-	int value = 0;
-	for (size_t i = 0; i < 5; i++)
-	{
-		if (dice[i] == 2)
-		{
-			value += 2;
-		}
-	}
-	return value;
+	return SameDiceSumForValue(dice, 2);
 }
 
 int ThreeDiceSum(int dice[5])
 {
-
-	return 12;
+	return SameDiceSumForValue(dice, 3);
 }
+
 
 
 
