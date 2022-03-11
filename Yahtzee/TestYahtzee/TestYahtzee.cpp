@@ -75,5 +75,11 @@ namespace TestYahtzee
 			int dice[5] = { 4, 2, 2, 2, 2 };
 			Assert::AreEqual(8, FourTwoDiceSum(dice));
 		}
+
+		TEST_METHOD(TestYahtzeeOfTwo22222Return50)
+		{
+			int dice[5] = { 2, 2, 2, 2, 2 };
+			Assert::AreEqual(50, YahtzeeTwo(dice));
+		}
 	};
 }

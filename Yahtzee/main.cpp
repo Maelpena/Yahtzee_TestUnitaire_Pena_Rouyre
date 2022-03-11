@@ -118,6 +118,11 @@ int FourTwoDiceSum(int dice[5])
 
 }
 
+
+int YahtzeeTwo(int dice[5])
+{
+	return 50;
+}
 int main()
 {
 	return 0;
