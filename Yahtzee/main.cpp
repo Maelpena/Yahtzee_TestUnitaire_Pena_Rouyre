@@ -49,11 +49,18 @@ int TwoDiceSum(int dice[5])
 	{
 		if (dice[i] == 2)
 		{
-			value++;
+			value += 2;
 		}
 	}
 	return value;
 }
+
+int ThreeDiceSum(int dice[5])
+{
+	return 0;
+}
+
+
 
 int main()
 {
