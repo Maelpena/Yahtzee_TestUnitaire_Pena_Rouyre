@@ -57,7 +57,10 @@ int ThreeDiceSum(int dice[5])
 	return SameDiceSumForValue(dice, 3);
 }
 
-
+int ThreeOneDiceSum(int dice[5])
+{
+	return 0;
+}
 
 
 int main()
