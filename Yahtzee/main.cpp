@@ -68,10 +68,12 @@ int ThreeOfAKindForValue(int dice[5], int value)
 		{
 			diceCount++;
 			result += value;
-			if (diceCount == 3)
-				return result;
+
 		}
 	}
+
+	if (diceCount >= 3)
+		return result;
 	return 0;
 }
 
@@ -83,6 +85,11 @@ int ThreeOneDiceSum(int dice[5])
 int ThreeTwoDiceSum(int dice[5])
 {
 	return ThreeOfAKindForValue(dice, 2);
+}
+
+int FourOneDiceSum(int dice[5])
+{
+	return 4;
 }
 
 
