@@ -122,6 +122,25 @@ int ThreeSixDiceSum(int dice[5])
 {
 	return ThreeOfAKindForValue(dice, 6);
 }
+
+int ThreeOfAKindCaller(int dice[5])
+{
+	int value = 0;
+	if (ThreeOneDiceSum(dice) > value)
+		value = ThreeOneDiceSum(dice);
+	if (ThreeTwoDiceSum(dice) > value)
+		value = ThreeTwoDiceSum(dice);
+	if (ThreeThreeDiceSum(dice) > value)
+		value = ThreeThreeDiceSum(dice);
+	if (ThreeFourDiceSum(dice) > value)
+		value = ThreeFourDiceSum(dice);
+	if (ThreeFiveDiceSum(dice) > value)
+		value = ThreeFiveDiceSum(dice);
+	if (ThreeSixDiceSum(dice) > value)
+		value = ThreeSixDiceSum(dice);
+
+	return value;
+}
 int FourOfAKindForValue(int dice[5], int value)
 {
 	int diceCount = 0;
@@ -167,6 +186,25 @@ int FourFiveDiceSum(int dice[5])
 int FourSixDiceSum(int dice[5])
 {
 	return ThreeOfAKindForValue(dice, 6);
+}
+
+int FourOfAKindCaller(int dice[5])
+{
+	int value = 0;
+	if (FourOneDiceSum(dice) > value)
+		value = FourOneDiceSum(dice);
+	if (FourTwoDiceSum(dice) > value)
+		value = FourTwoDiceSum(dice);
+	if (FourThreeDiceSum(dice) > value)
+		value = FourThreeDiceSum(dice);
+	if (FourFourDiceSum(dice) > value)
+		value = FourFourDiceSum(dice);
+	if (FourFiveDiceSum(dice) > value)
+		value = FourFiveDiceSum(dice);
+	if (FourSixDiceSum(dice) > value)
+		value = FourSixDiceSum(dice);
+
+	return value;
 }
 
 int YahtzeeForValue(int dice[5], int value)
@@ -216,6 +254,24 @@ int YahtzeeSix(int dice[5])
 	return YahtzeeForValue(dice, 6);
 }
 
+int YahtzeeOfAKindCaller(int dice[5])
+{
+	int value = 0;
+	if (YahtzeeOne(dice) > value)
+		value = YahtzeeOne(dice);
+	if (YahtzeeTwo(dice) > value)
+		value = YahtzeeTwo(dice);
+	if (YahtzeeThree(dice) > value)
+		value = YahtzeeThree(dice);
+	if (YahtzeeFour(dice) > value)
+		value = YahtzeeFour(dice);
+	if (YahtzeeFive(dice) > value)
+		value = YahtzeeFive(dice);
+	if (YahtzeeSix(dice) > value)
+		value = YahtzeeSix(dice);
+
+	return value;
+}
 
 int FullHouse(int dice[5])
 {
@@ -260,7 +316,6 @@ int StraightWithSize(int dice[5], int size)
 	int maxStraightSize = 1;
 	for (size_t i = 1; i < 5; i++)
 	{
-		std::cout << dice[i] << std::endl;
 		if (lastValue + 1 == dice[i])
 		{
 			straightSize += 1;
@@ -291,8 +346,32 @@ int LargeStraight(int dice[5])
 }
 int main()
 {
-	int dice[5] = { 5, 2, 4, 3, 3 };
+	int dice[5] = { 2, 3, 4, 3, 5 };
+	std::cout << "**************************" << std::endl;
+	for (size_t i = 0; i < 5; i++)
+	{
+		std::cout << "  " << dice[i] << "  ";
+	}
+	std::cout << std::endl;
+	std::cout << "**************************" << std::endl;
+
 	//int dice[5] = { 3, 2, 5, 4, 1 };
+
+
+	std::cout << "Ones                 = " << OneDiceSum(dice) << std::endl;
+	std::cout << "Twos                 = " << TwoDiceSum(dice) << std::endl;
+	std::cout << "Threes               = " << ThreeDiceSum(dice) << std::endl;
+	std::cout << "Fours                = " << FourDiceSum(dice) << std::endl;
+	std::cout << "Fives                = " << FiveDiceSum(dice) << std::endl;
+	std::cout << "Sixes                = " << SixDiceSum(dice) << std::endl;
+	std::cout << "Three of a kind      = " << ThreeOfAKindCaller(dice) << std::endl;
+	std::cout << "Four of a kind       = " << FourOfAKindCaller(dice) << std::endl;
+	std::cout << "Full House           = " << FullHouse(dice) << std::endl;
+	std::cout << "Small Straight       = " << SmallStraight(dice) << std::endl;
+	std::cout << "Large Straight       = " << LargeStraight(dice) << std::endl;
+	std::cout << "Chance               = " << SumDice(dice) << std::endl;
+	std::cout << "Yahtzee              = " << YahtzeeOfAKindCaller(dice) << std::endl;
+
 
 	SmallStraight(dice);
 	return 0;
