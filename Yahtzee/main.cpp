@@ -1,4 +1,5 @@
-
+#include <algorithm>  
+#include <iostream>  
 
 int SumDice(int des[5] )
 {
@@ -179,12 +180,39 @@ int FullHouse(int dice[5])
 		return 0;
 }
 
-int SmallStraight()
+int SmallStraight(int dice[5])
 {
-	return 30;
+	std::sort(&dice[0], &dice[5]);
+	int lastValue = dice[0];
+	int straightSize = 1;
+	int maxStraightSize = 1;
+	for (size_t i = 1; i < 5; i++)
+	{
+		std::cout << dice[i] << std::endl;
+		if (lastValue + 1 == dice[i])
+		{
+			straightSize += 1;
+			if (straightSize >= 4)
+				return 30;
+		}
+		else if (lastValue == dice[i])
+		{
+			continue;
+		}
+		else {
+			straightSize = 1;
+		}
+		lastValue = dice[i];
+	}
+
+	return 0;
 }
 
 int main()
 {
+	int dice[5] = { 5, 2, 4, 3, 3 };
+	//int dice[5] = { 3, 2, 5, 4, 1 };
+
+	SmallStraight(dice);
 	return 0;
 }

@@ -106,11 +106,10 @@ namespace TestYahtzee
 			Assert::AreEqual(0, FullHouse(dice));
 		}
 
-		TEST_METHOD(TestSmallStraight52433Return25)
+		TEST_METHOD(TestSmallStraight52433Return30)
 		{
-			int dice[5] = { 3, 2, 3, 3, 3 };
-			Assert::AreEqual(30, FullHouse(dice));
+			int dice[5] = { 5, 2, 4, 3, 3 };
+			Assert::AreEqual(30, SmallStraight(dice));
 		}
-
 	};
 }
