@@ -89,7 +89,22 @@ int ThreeTwoDiceSum(int dice[5])
 
 int FourOneDiceSum(int dice[5])
 {
-	return 4;
+	int diceCount = 0;
+	int result = 0;
+
+	for (size_t i = 0; i < 5; i++)
+	{
+		if (dice[i] == 1)
+		{
+			diceCount++;
+			result += 1;
+
+		}
+	}
+
+	if (diceCount >= 4)
+		return result;
+	return 0;
 }
 
 
